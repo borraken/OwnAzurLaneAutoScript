@@ -24,7 +24,7 @@ class Device(Screenshot, Control, AppControl, EmulatorManager):
     detect_record = set()
     click_record = deque(maxlen=15)
     stuck_timer = Timer(60, count=60).start()
-    stuck_timer_long = Timer(180, count=180).start()
+    stuck_timer_long = Timer(240, count=240).start()
     stuck_long_wait_list = ['BATTLE_STATUS_S', 'PAUSE', 'LOGIN_CHECK']
 
     def __init__(self, *args, **kwargs):

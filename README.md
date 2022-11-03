@@ -1,5 +1,15 @@
 **| [English](README_en.md) | Chinese |**
 
+### 修改了部分配置
+
+去除配置锁定及部分恶意代码
+
+延长允许战斗时间，用于共斗活动
+
+非后宅的心情回复上限改为150，可以在一个队伍里同时使用后宅和非后宅角色
+
+#### 可能需要自行配置代理
+
 # AzurLaneAutoScript
 
 #### Discord [![](https://img.shields.io/discord/720789890354249748?logo=discord&logoColor=ffffff&color=4e4c97)](https://discord.gg/AQN6GeJ) QQ群  ![](https://img.shields.io/badge/QQ%20Group-1087735381-4e4c97)

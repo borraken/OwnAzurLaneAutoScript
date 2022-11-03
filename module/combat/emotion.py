@@ -21,7 +21,7 @@ DIC_RECOVER = {
     'dormitory_floor_2': 50,
 }
 DIC_RECOVER_MAX = {
-    'not_in_dormitory': 119,
+    'not_in_dormitory': 150,
     'dormitory_floor_1': 150,
     'dormitory_floor_2': 150,
 }
@@ -128,11 +128,11 @@ class FleetEmotion:
             datetime.datetime: When will emotion >= control limit.
                 If already recovered, return time in the past.
         """
-        if self.control == 'keep_exp_bonus' and self.recover == 'not_in_dormitory':
-            logger.critical(f'Fleet {self.fleet} Emotion Control=\"Keep Happy Bonus\" and '
-                            f'Fleet {self.fleet} Recover Location=\"Docks\" can not be used together, '
-                            'please check your emotion settings')
-            raise RequestHumanTakeover
+        # if self.control == 'keep_exp_bonus' and self.recover == 'not_in_dormitory':
+        #     logger.critical(f'Fleet {self.fleet} Emotion Control=\"Keep Happy Bonus\" and '
+        #                     f'Fleet {self.fleet} Recover Location=\"Docks\" can not be used together, '
+        #                     'please check your emotion settings')
+        #     raise RequestHumanTakeover
         recover_count = (self.limit + expected_reduce - self.current) // self.speed
         recovered = (int(datetime.now().timestamp()) // 360 + recover_count + 1) * 360
         return datetime.fromtimestamp(recovered)
